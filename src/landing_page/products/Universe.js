@@ -53,7 +53,8 @@ function Universe() {
           </div>
          
           <div className="col text-center"  >
-            <h1>Tijori</h1>
+            <img src="media/images/tijori.svg"style={{width:'60%'}}></img>
+            
           <p className=" text-muted mt-3 " style={{lineHeight:'18px',fontSize:'.85rem'}}>
             Investment research platform<br/>
              that offers detailed insights on
