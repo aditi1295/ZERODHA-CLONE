@@ -4,11 +4,11 @@ function Footer() {
     <footer style={{backgroundColor:"rgb(250, 250, 250)"}}>
 
     
-    <div className="container border-top mt-5" >
+    <div className="container border-top mt-5 " >
       <div className="row mt-5" >
         <div className="col">
           <img src="media/images/logo.svg" style={{ width: "50%" }} />
-          <p className="fs-8 text-muted">
+          <p className="fs-8 text-muted mt-3">
             &copy; 2010 - 2026, Zerodha Broking Ltd. All rights reserved.
           </p>
           <p className=" text-muted d-flex gap-3">
