@@ -6,11 +6,11 @@ import HomePage from './landing_page/home/HomePage';
 import SignUp from  './landing_page/signup/SignUp';
 import AboutPage from  './landing_page/about/AboutPage';
 import PrdouctPage  from  './landing_page/products/ProductPage'
-import SupportPage from  './landing_page/support/SupportPage'
-import Pricing from './landing_page/home/Pricing';
+import SupportPage from  './landing_page/support/SupportPage';
 import Navbar from './landing_page/Navbar';
 import Footer from './landing_page/Footer';
 import NotFound from './landing_page/NotFound';
+import PricingPage from './landing_page/pricing/PricingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +21,7 @@ root.render(
     <Route path="/signup" element={<SignUp/>}/>
     <Route path="/about" element={<AboutPage/>}/>
     <Route path="/product" element={<PrdouctPage/>}/>
-    <Route path="/pricing" element={<Pricing/>}/>
+    <Route path="/pricing" element={<PricingPage/>}/>
     <Route path="/support" element={<SupportPage/>}/>
     <Route path="*" element={<NotFound/>}/> 
   </Routes>
