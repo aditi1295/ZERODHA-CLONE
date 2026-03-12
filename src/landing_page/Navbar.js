@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-      <nav class="navbar navbar-expand-lg  border-bottom  " style={{backgroundColor:"#FFF" }}>
-        <div class="container p-2">
+      <nav class="navbar navbar-expand-lg  border-bottom " style={{backgroundColor:"#FFF" }}>
+        <div class="container p-3">
           <Link class="navbar-brand" to="/">
             <img src="media/images/logo.svg" style={{width:"30%"}}alt="Logo"/>
           </Link>
@@ -20,8 +20,8 @@ function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="" role="search">
-                <ul class="navbar-nav  mb-lg-0">
-              <li class="nav-item">
+                <ul class="navbar-nav  mb-lg-0 ">
+              <li class="nav-item ">
                 <Link class="nav-link active" aria-current="page" to="/signup">
                   SignUp
                 </Link>
