@@ -1,48 +1,64 @@
 import React from "react";
 
-import { positions } from "../data/data";
-
-const Positions = () => {
+const Summary = () => {
   return (
     <>
-      <h3 className="title">Positions ({positions.length})</h3>
+      <div className="username">
+        <h6>Hi, User!</h6>
+        <hr className="divider" />
+      </div>
 
-      <div className="order-table">
-        <table>
-          <tr>
-            <th>Product</th>
-            <th>Instrument</th>
-            <th>Qty.</th>
-            <th>Avg.</th>
-            <th>LTP</th>
-            <th>P&L</th>
-            <th>Chg.</th>
-          </tr>
+      <div className="section">
+        <span>
+          <p>Equity</p>
+        </span>
 
-          {positions.map((stock, index) => {
-            const curValue = stock.price * stock.qty;
-            const isProfit = curValue - stock.avg * stock.qty >= 0.0;
-            const profClass = isProfit ? "profit" : "loss";
-            const dayClass = stock.isLoss ? "loss" : "profit";
+        <div className="data">
+          <div className="first">
+            <h3>3.74k</h3>
+            <p>Margin available</p>
+          </div>
+          <hr />
 
-            return (
-              <tr key={index}>
-                <td>{stock.product}</td>
-                <td>{stock.name}</td>
-                <td>{stock.qty}</td>
-                <td>{stock.avg.toFixed(2)}</td>
-                <td>{stock.price.toFixed(2)}</td>
-                <td className={profClass}>
-                  {(curValue - stock.avg * stock.qty).toFixed(2)}
-                </td>
-                <td className={dayClass}>{stock.day}</td>
-              </tr>
-            );
-          })}
-        </table>
+          <div className="second">
+            <p>
+              Margins used <span>0</span>{" "}
+            </p>
+            <p>
+              Opening balance <span>3.74k</span>{" "}
+            </p>
+          </div>
+        </div>
+        <hr className="divider" />
+      </div>
+
+      <div className="section">
+        <span>
+          <p>Holdings (13)</p>
+        </span>
+
+        <div className="data">
+          <div className="first">
+            <h3 className="profit">
+              1.55k <small>+5.20%</small>{" "}
+            </h3>
+            <p>P&L</p>
+          </div>
+          <hr />
+
+          <div className="second">
+            <p>
+              Current Value <span>31.43k</span>{" "}
+            </p>
+            <p>
+              Investment <span>29.88k</span>{" "}
+            </p>
+          </div>
+        </div>
+        <hr className="divider" />
       </div>
     </>
   );
 };
 
-export default Positions;
+export default Summary;
