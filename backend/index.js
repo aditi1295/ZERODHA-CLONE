@@ -9,7 +9,7 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
-const { Signup, Login } = require("./Controllers/AuthController");
+const { Signup, Login } = require("./controllers/AuthController");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
