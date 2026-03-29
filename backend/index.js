@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
-
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 const { Signup, Login } = require("./controllers/AuthController");
