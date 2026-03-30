@@ -15,7 +15,12 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "https://zerodha-clone-mnt1.vercel.app",
+  "https://zerodha-clone-seven-rose.vercel.app",
+];
 
 app.use(
   cors({
@@ -213,6 +218,11 @@ app.get("/allHoldings", async (req, res) => {
 app.get("/allPositions", async (req, res) => {
   let allPositions = await PositionsModel.find({});
   res.json(allPositions);
+});
+
+app.get("/allOrders", async (req, res) => {
+  let allOrders = await OrdersModel.find({});
+  res.json(allOrders);
 });
 
 app.post("/newOrder", async (req, res) => {
