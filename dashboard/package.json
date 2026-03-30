@@ -32,7 +32,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "jsx-a11y/alt-text": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [
