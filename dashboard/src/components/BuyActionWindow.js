@@ -6,13 +6,15 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://zerodha-h7g7.onrender.com";
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
   const generalContext = useContext(GeneralContext);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post(`${API_BASE_URL}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
@@ -24,7 +26,7 @@ const BuyActionWindow = ({ uid }) => {
   
   };
  const handleSellClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post(`${API_BASE_URL}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

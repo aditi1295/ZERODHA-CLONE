@@ -2,14 +2,14 @@ import React, {useState,useEffect} from "react";
 // import { positions } from "../data/data";
 import axios from "axios";
 
-
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://zerodha-h7g7.onrender.com";
 
 const Positions = () => {
 
   const [allposition,setallposition]=useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:3002/allPositions").then((res)=>{
+    axios.get(`${API_BASE_URL}/allPositions`).then((res)=>{
       setallposition(res.data);
     });
     },[]);
