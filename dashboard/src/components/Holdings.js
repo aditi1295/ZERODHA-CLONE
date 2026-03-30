@@ -3,12 +3,15 @@ import axios from "axios";
 import { VerticalGraphs } from "./VerticalGraphs";
 
 // import { holdings } from "../data/data";
+
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://zerodha-h7g7.onrender.com";
+
 const Holdings = () => {
 
 const [allHoldings,setallHoldings] = useState([]);
 
 useEffect(()=>{
-  axios.get("http://localhost:3002/allHoldings").then((res)=>{
+  axios.get(`${API_BASE_URL}/allHoldings`).then((res)=>{
     setallHoldings(res.data);
   });
 },[]);

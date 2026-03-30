@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "https://zerodha-h7g7.onrender.com";
 
 function SignUp() {
     const [mode, setMode] = useState("signup");
@@ -33,9 +33,9 @@ function SignUp() {
                 mode === "signup"
                     ? formData
                     : {
-                            email: formData.email,
-                            password: formData.password,
-                        };
+                        email: formData.email,
+                        password: formData.password,
+                    };
 
             const response = await axios.post(`${API_BASE_URL}${endpoint}`, payload, {
                 withCredentials: true,
